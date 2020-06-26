@@ -1,45 +1,29 @@
 import ReactDOM from 'react-dom'
 import React from 'react'
-import '../css/index.css'
+import { Provider } from 'react-redux'
 
-class Incremennt extends React.Component{
-    constructor(props){
-        super(props)
-        this.state = ( {curent_increment : this.props.start} )
-        this.timer = null
-    }
+import { store } from './store'
+import {TestCompenent} from './compenents/TestCompenent'
 
-    componentDidMount(){
-        this.timer =  window.setInterval(this.tick.bind(this), 1000)
-    }
+import '../css/index.scss'
+// import {Background_game} from './frame/backgroud_game.jsx'
 
-    componentwillUnmount(){
-        window.setTimeout(this.timer)
-    }
+const rootElement = document.getElementById('app')
 
-    tick(){
-            this.setState(function (state, props){
-                var new_inc = this.state.curent_increment + this.props.step
-                if( new_inc > this.props.end ){ new_inc = this.props.end}
-                if( new_inc <= this.props.end ){
-                    return {curent_increment : new_inc}
-                }
-            })
-    }
-    
-    
-    render(){
-        return <span className="incr"> {this.state.curent_increment} </span>
-    }
+ReactDOM.render(
+  <Provider store={store}>
+    <TestCompenent />
+  </Provider>,
+    rootElement
+)
+
+window.dispatchPayload = (payload) => {
+  store.dispatch(payload);
+}
+
+window.test = () => {
+  console.log(store)
+
 }
 
 
-
-function Home(){
-    return <div>
-        <p>hello world</p>
-        <Incremennt start={0} end={100} step={1}/>
-    </div>
-}
-
-ReactDOM.render(< Home />, document.querySelector('#app'))

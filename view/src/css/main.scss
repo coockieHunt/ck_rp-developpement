@@ -1,0 +1,44 @@
+// RESET
+body{
+    margin: 0;
+    padding: 0;
+    font-family:  Roboto;
+}
+
+// FONT
+@font-face {
+    font-family: "Roboto";
+    src: url("../font/Roboto-Regular.ttf");
+}
+
+
+// STYLE
+.Row2{
+    display: flex;
+}
+
+.Row2 {
+    div{
+        width: 50%;
+    }
+    .row_right{
+        text-align: right;
+    }
+}
+
+// SVG
+.icon{
+    color: white;
+    width: 1em;
+    margin: 0 0 0 10px;
+}
+
+//Animation
+.blink {
+    animation: blinker 1s linear infinite;
+  }
+  @keyframes blinker {
+    50% {
+        opacity: 0.0;
+    }
+  }
