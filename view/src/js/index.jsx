@@ -22,8 +22,7 @@ window.dispatchPayload = (payload) => {
 }
 
 window.test = () => {
-  console.log(store)
-
+  console.log(store.getState())
 }
 
 

@@ -1,5 +1,5 @@
 const initialState = {
-    value: "basse"
+    content: "basse"
 }
 
 export default (state, action) => {
@@ -10,7 +10,7 @@ export default (state, action) => {
     switch(action.type) {
         case "SET_TEST":
             console.log ("update reducer")
-            return {...state, value: action.value}
+            return {...state, content : action.content}
 
         default: return state;
     }

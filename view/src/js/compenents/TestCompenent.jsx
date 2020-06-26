@@ -9,29 +9,26 @@ export class TestCompenent extends React.Component{
 
    
     render(){
-        return <><h1> test :  {} </h1></> 
+        return <><h1> test :  {this.props.valueTest} </h1></> 
     }
 
 }
 
-// export default connect((state, ownProps) => {
-//     console.log(state)
-
-//     return {
-//         TestCompenent:  state.testcompenent
-//     }
-// }, (dispatch) => {
-//     console.log(dispatch)
-//     return {
-//         state
-//     }
-// })(TestCompenent);
 
 const mapStateToProps = state => {
-
-    return {value : state.value}
+    return {
+        valueTest : state.content
+    }
 }
 
-export default connect(mapStateToProps) (TestCompenent)
+const mapDispatchToProps = dispatch => {
+    return true
+}
+
+
+export default connect(
+    mapStateToProps, 
+    mapDispatchToProps
+)(TestCompenent)
 
 
