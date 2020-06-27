@@ -4,6 +4,8 @@ import { connect } from "react-redux";
 export class TestCompenent extends React.Component{
     constructor(props) {
         super(props);
+        console.log("test :")
+        console.log(this.props)
     }
     
     render(){

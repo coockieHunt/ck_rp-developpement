@@ -14,7 +14,7 @@ export class Dialog extends React.Component{
 }
 
 function mapStateToProps(state) {
-    return { valueTest: state.DialogReducer }
+    return { valueTest: state.CompenentDialog }
 }
 
 export default connect(mapStateToProps) (Dialog)

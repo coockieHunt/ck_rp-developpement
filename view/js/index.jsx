@@ -9,14 +9,14 @@ import '../src/css/main.scss'
 
 // IMPORT COMPENENT
 import {Dialog} from './window/dialog'
-import {TestCompenentSec} from './compenents'
+import {TestCompenent} from './compenents'
 
 // inject shadow dom
 const rootElement = document.getElementById('App')
 ReactDOM.render(
   <Provider store={GlobalStore}>
       < Dialog />
-      < TestCompenentSec />
+      < TestCompenent />
   </Provider>,
     rootElement
 )
