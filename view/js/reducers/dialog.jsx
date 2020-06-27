@@ -1,5 +1,5 @@
 const initialState = {
-    current : "sqd"
+    current : "banckground"
 }
 
 export default (state, action) => {
