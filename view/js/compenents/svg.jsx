@@ -1,5 +1,4 @@
-import ReactDOM from 'react-dom'
-import React, { useState } from 'react';
+import React from 'react';
 
 // CONFIG
 const SVG = {

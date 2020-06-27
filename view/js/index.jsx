@@ -8,15 +8,13 @@ import './app/function.jsx'
 import '../src/css/main.scss'
 
 // IMPORT COMPENENT
-import {Dialog} from './window/dialog'
-import {TestCompenent} from './compenents'
+import {DialogCompenent} from './compenents'
 
 // inject shadow dom
 const rootElement = document.getElementById('App')
 ReactDOM.render(
   <Provider store={GlobalStore}>
-      < Dialog />
-      < TestCompenent />
+      < DialogCompenent />
   </Provider>,
     rootElement
 )

@@ -9,6 +9,13 @@ window.dispatchPayload = (payload) => {
     GlobalStore.dispatch(payload);
 }
 
+/**
+ * dysplay specifique frame
+ * @param {string} frame window name
+ */
+window.ChangeFrame = (frame) => {
+    dispatchPayload({"type": "SET_DIALOG", 'current' : frame})
+}
 
 /**
  *  print console global store

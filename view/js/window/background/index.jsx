@@ -2,6 +2,7 @@ import { Colum2 } from '../../compenents/style'
 import { Svg} from '../../compenents/svg'
 import React from 'react'
 
+import '../../../src/css/background.scss'
 
 class Bottom_bar extends React.Component{
     render(){

@@ -1,9 +1,9 @@
-import TestCompenent from './TestCompenent';
 import Colum2 from './style';
 import Svg from './svg';
+import DialogCompenent from './dialog';
 
 export {
-    TestCompenent, 
+    DialogCompenent,
     Colum2, 
     Svg
 }
