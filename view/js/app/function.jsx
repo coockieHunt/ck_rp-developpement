@@ -14,7 +14,7 @@ window.dispatchPayload = (payload) => {
  * @param {string} frame window name
  */
 window.ChangeFrame = (frame) => {
-    dispatchPayload({"type": "SET_DIALOG", 'current' : frame})
+    dispatchPayload({"type": "CHANGE_WINDOW", 'current' : frame})
 }
 
 /**
