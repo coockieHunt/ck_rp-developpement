@@ -1,8 +1,22 @@
 {
-  "name": "test",
+  "name": "ck_rp-developpement",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "developement ck_tp onset game",
+  "main": "view/index.html",
+  "scripts": {
+    "debug": "npx parcel view/index.html",
+    "build" : "npx parcel build view/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coockieHunt/ck_rp-developpement.git"
+  },
+  "author": "coockie_hunt",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/coockieHunt/ck_rp-developpement/issues"
+  },
+  "homepage": "https://github.com/coockieHunt/ck_rp-developpement#readme",
   "dependencies": {
     "react": "^0.14.9 || ^15.3.0 || ^16.0.0",
     "react-dom": "^16.13.1",
