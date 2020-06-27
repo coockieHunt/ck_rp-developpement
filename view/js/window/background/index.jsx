@@ -1,5 +1,5 @@
-import { Colum2 } from '../compenents/style'
-import { Svg} from '../compenents/svg'
+import { Colum2 } from '../../compenents/style'
+import { Svg} from '../../compenents/svg'
 import React from 'react'
 
 

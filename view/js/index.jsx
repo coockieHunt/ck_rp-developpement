@@ -2,20 +2,21 @@
 import ReactDOM from 'react-dom'
 import React from 'react'
 import { Provider } from 'react-redux'
-import { GlobalStore } from './store'
-import {TestCompenent} from './compenents'
-// IMPORT FUNCTION
-import './app'
-
-//IMPORT MAIN STYLE
+import { GlobalStore } from './app/store.jsx'
+// import globaly
+import './app/function.jsx'
 import '../src/css/main.scss'
 
-// INJECT SHADOW DOM TO DOM
-const rootElement = document.getElementById('app')
+// IMPORT COMPENENT
+import {Dialog} from './window/dialog'
+import {TestCompenentSec} from './compenents'
 
+// inject shadow dom
+const rootElement = document.getElementById('App')
 ReactDOM.render(
   <Provider store={GlobalStore}>
-    <TestCompenent />
+      < Dialog />
+      < TestCompenentSec />
   </Provider>,
     rootElement
 )

@@ -1,12 +1,12 @@
-//  IMPORT MODULE
+//  IMPORT 
 import { createStore, combineReducers } from "redux";
 
-// IMPORT REDUCERS
-import TestReducer from './reducers/test'
-
+import {TestReducer, TestReducerSec, DialogReducer} from '../reducers'
 // CREATE GLOBAL STORE
 export const GlobalStore = createStore(
     combineReducers({ //combine all reducer
+      DialogReducer,
       CompenentTest :TestReducer,
+      CompenentTestSec :TestReducerSec,
     },
 ));  
