@@ -1,0 +1,14 @@
+{
+    "directory" : 
+    {
+        "main" : "dialog",
+        "view" : "view",
+        "src" : "src",
+        "sounds" : "sounds"
+    },
+
+    "view" : [
+        "test.html",
+        "test_deux.html"
+    ]
+}
