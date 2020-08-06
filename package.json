@@ -4,8 +4,8 @@
   "description": "developement ck_tp onset game",
   "main": "view/index.html",
   "scripts": {
-    "debug": "npx parcel view/index.html",
-    "build" : "npx parcel build view/index.html"
+    "dev": "npx parcel dialog/view/*.html",
+    "build": "npx parcel build dialog/view/*.html"
   },
   "repository": {
     "type": "git",

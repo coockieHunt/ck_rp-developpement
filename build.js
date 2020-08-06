@@ -1,9 +1,9 @@
 const inquirer = require('inquirer');
 const chalk = require('chalk');
-const fs = require('fs')
+var { spawn } = require('child_process');
 
 var pjson = require('./package.json');
-var cjson = require('./config_ck.json')
+// var cjson = require('./config_ck.json')
 
 function hello_msg(){
     console.log(pjson.name + " :")
@@ -61,49 +61,27 @@ function main_process(){
     main_nav()
 }
 
-function CheckSrcListing(){
-    let dir = cjson.directory.main
-    let src_dir = cjson.directory.view
-    let view_list = cjson.view
-    let final_dir = dir + '/' + src_dir
-
-    let config_cmd = '';
-
-    var loop = new Promise((resolve, reject) => {
-        view_list.forEach((item, array) => {
-            let view = final_dir + "/" + item
-
-            fs.access(view, fs.F_OK, (err) => {
-                if (err) {
-                    console.error(err)
-                    return false
-                }
-            
-                console.log('file ok ' + view)
-                config_cmd += view
-            })
-
-        console.log(array, item.length );
-
-            if (item === item.length -1) resolve();
-        })
-    });
-
-    loop.then(() => {
-        console.log("config_cmd");
-    });
-      
-}
 
 function run_compil(devolop = false){
-    CheckSrcListing()
-
-
+    // yarn parcel dialog/view/*.html
+    // npm run dev
     if( devolop ){
-        console.log("run develop")
+        var  rc  = spawn('npm.cmd', ['run', 'dev']);
     }else{
-        console.log("run prod")
+        var  rc  = spawn('npm.cmd', ['run', 'build']);
     }
+
+    rc.stdout.on('data', (data) => {
+        console.log(`stdout: ${data}`);
+      });
+      
+      rc.stderr.on('data', (data) => {
+        console.error(`stderr: ${data}`);
+      });
+      
+      rc.on('close', (code) => {
+        console.log(`child process exited with code ${code}`);
+      });
 }
 
 main_process()
