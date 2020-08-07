@@ -72,7 +72,7 @@ function run_compil(devolop = false){
       });
       
       rc.stderr.on('data', (data) => {
-        console.error(`st error : ${data}`);
+        console.error(`${data}`);
       });
       
       rc.on('close', (code) => {
