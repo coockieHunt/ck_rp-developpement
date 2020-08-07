@@ -3,7 +3,6 @@ const chalk = require('chalk');
 var { spawn } = require('child_process');
 
 var pjson = require('./package.json');
-// var cjson = require('./config_ck.json')
 
 function hello_msg(){
     console.log(pjson.name + " :")
@@ -61,10 +60,7 @@ function main_process(){
     main_nav()
 }
 
-
 function run_compil(devolop = false){
-    // yarn parcel dialog/view/*.html
-    // npm run dev
     if( devolop ){
         var  rc  = spawn('npm.cmd', ['run', 'dev']);
     }else{
@@ -72,11 +68,11 @@ function run_compil(devolop = false){
     }
 
     rc.stdout.on('data', (data) => {
-        console.log(`stdout: ${data}`);
+        console.log(`${data}`);
       });
       
       rc.stderr.on('data', (data) => {
-        console.error(`stderr: ${data}`);
+        console.error(`st error : ${data}`);
       });
       
       rc.on('close', (code) => {
